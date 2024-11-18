@@ -33,7 +33,7 @@ startrek_bio = """ The Star Trek franchise is a beloved and iconic science ficti
 ################### page EDA ######################################
 page_two_name = "EDA"
 page_2_title = "# Exploratory Data Analysis (EDA)"
-glob_image_location = r".\images\glob.jpg"
+
 
 
 
