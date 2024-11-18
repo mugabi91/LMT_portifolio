@@ -7,3 +7,5 @@ caption_vaders_pic = "Darth Vader illustration"
 
 startrek_pic =r"./images/startrek.jpg"
 caption_startrek_pic = "Star Trek Enterprise illustration"
+
+glob_image_location = r"./images/glob.jpg"
