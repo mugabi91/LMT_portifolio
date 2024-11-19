@@ -27,13 +27,10 @@ startrek_bio = """ The Star Trek franchise is a beloved and iconic science ficti
     At its core, Star Trek is known for its optimistic vision of the future, exploring themes of exploration, diversity, cooperation, and the quest for knowledge. Set in the distant future, it follows the adventures of Starfleet, a space-exploration organization representing the United Federation of Planets. The franchise features a diverse cast of characters from different species and backgrounds, working together aboard starships like the iconic USS Enterprise to discover new worlds, encounter alien civilizations, and tackle moral and ethical dilemmas.
 
     Star Trek is renowned for its groundbreaking representation, including one of the first multicultural casts on television and addressing social issues through allegorical storytelling. It has inspired generations of fans (known as Trekkies or Trekkers) and has become a cultural touchstone for its exploration of humanity's potential, the wonders of space exploration, and the importance of cooperation and understanding in a vast and diverse universe."""
-    
 
-
-################### page EDA ######################################
+# start of page one extension
 page_two_name = "EDA"
 page_2_title = "# Exploratory Data Analysis (EDA)"
-
 
 
 
@@ -84,3 +81,6 @@ fan_insight = """#### INSIGHTS
     Inspect the graphs  above for the rest and more insight on location of fans and non fans locations
 
     """
+    
+    
+# end of page one 

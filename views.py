@@ -56,7 +56,8 @@ def read_file(file_location:str):
 
 
 # page one view 
-def page_one_view(rows_in_data:int,cols_in_data:int):
+
+def page_one_view(rows_in_data:int,cols_in_data:int, df:pd.DataFrame):
     #title 
     st.write(page_one_title.upper()) #type: ignore
     
@@ -76,10 +77,9 @@ def page_one_view(rows_in_data:int,cols_in_data:int):
     st.write_stream(stream_data(startrek_bio))
     
     st.divider()
-
-def page_two_view():
+# page one extension start
+def page_one_view_extension(df:pd.DataFrame):
     st.write(page_2_title)  #type: ignore
-    
     # Load the image
     image = Image.open(glob_image_location)  # type:ignore
     # Resize the image
@@ -110,7 +110,7 @@ def page_two_view():
             Dropped the useless variables
             Dropped the duplicated entries
             Renamed the long Variable names as below 
-            Did data type convertions
+            Changed Data types to the right Data types
             Did some exploring after
             
             """))
@@ -166,7 +166,8 @@ def page_two_view():
         Expanded_universe_fan=("Expanded_universe_fan","count"),
         Count=('Location', 'size')
         ).reset_index() # type: ignore
-    gender_count # type: ignore
+    
+    st.write(gender_count) # type: ignore
     
     
     # Melt the DataFrame to have a single 'Count' column for visualization
@@ -176,6 +177,7 @@ def page_two_view():
         var_name='Category', 
         value_name='Value'
         ) # type: ignore
+
     
     # Create a grouped bar chart using Plotly Express
     fi1g = px.bar(  #type: ignore
@@ -263,7 +265,7 @@ def page_two_view():
         Count=('Location', 'size')
         ).reset_index()
     
-    
+
     
 
     
@@ -281,9 +283,9 @@ def page_two_view():
     
     # Bar plot for fans location
     bar_plot_plotly(counts_sorted, x='Location', y='count', title='Fans Location',title_text="Fans Location") # type: ignore
-    bar_plot_plotly(fan_location_count, x='Location', y='starwars_fan', title='Star Wars Fans Location',title_text="Star Wars Fans Location") # type: ignore
-    bar_plot_plotly(fan_location_count, x='Location', y='star_trek_fan', title='Star Trek Fans Location',title_text="Star Trek Fans Location") # type: ignore 
-    bar_plot_plotly(fan_location_count, x='Location', y='Expanded_universe_fan', title='Expanded Universe Fans Location',title_text="Expanded Universe Fans Location") # type: ignore
+    bar_plot_plotly(fan_location_count.sort_values("starwars_fan",ascending=False), x='Location', y='starwars_fan', title='Star Wars Fans Location',title_text="Star Wars Fans Location") # type: ignore
+    bar_plot_plotly(fan_location_count.sort_values("star_trek_fan",ascending=False), x='Location', y='star_trek_fan', title='Star Trek Fans Location',title_text="Star Trek Fans Location") # type: ignore 
+    bar_plot_plotly(fan_location_count.sort_values("Expanded_universe_fan",ascending=False), x='Location', y='Expanded_universe_fan', title='Expanded Universe Fans Location',title_text="Expanded Universe Fans Location") # type: ignore
 
 
     st.write_stream(stream_data(fan_insight))
@@ -336,10 +338,8 @@ Inspect the graphs  above for the income and edcation levels of the fans and non
 
 """))
     st.divider()
-    st.write_stream(stream_data(" #### Thanks for viewing PART 1 of the EDA."))
+    st.write_stream(stream_data(" #### Thanks for viewing."))
     st.divider()
     
-    
-
-
+# page one view end 
 
