@@ -1,4 +1,4 @@
-toseeimport pandas as pd 
+import pandas as pd 
 import streamlit as st 
 import time 
 from image_urls import *
