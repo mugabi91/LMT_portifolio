@@ -9,3 +9,5 @@ startrek_pic =r"./images/startrek.jpg"
 caption_startrek_pic = "Star Trek Enterprise illustration"
 
 glob_image_location = r"./images/glob.jpg"
+
+my_logo_pic =r"./images/my_log.jpg"

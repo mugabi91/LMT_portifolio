@@ -1,11 +1,31 @@
 
 ################### page Home ######################################
-page_one_name = "Home"
+page_one_name = "Starwars Dataset."
 
-page_one_title = "# lmt data analysis portifolio" 
+profile_intro = """Hi, I'm LUBEGA TREVOR MUGABI, a passionate Data Analyst with a strong background in **Python**, **SQL**, and **data visualization**. I specialize in transforming raw data into actionable insights and automating workflows to optimize business processes. With experience in tools like **Tableau**, **Power BI**, and **Excel**, I strive to create intuitive dashboards and meaningful reports that empower decision-makers.
+
+I hold a Bachelor's degree in **Statistics**, and I am always looking to grow my skill set through continuous learning and new challenges. I enjoy exploring new technologies and leveraging them to solve complex problems in data analysis, programming, and automation.
+
+        """
+
+
+skill_listing = """
+- **Programming Languages**: Python, R, SQL, Ruby
+- **Data Analysis & Processing**: Pandas, NumPy, Stata, Polars. etc
+- **Data Visualization**: Tableau, Power BI, Matplotlib, Seaborn
+- **Machine Learning**: Scikit-Learn, TensorFlow (beginner)
+- **Automation & Scripting**: Python (Automating workflows and tasks)
+- **Database Management**: SQL (MySQL, PostgreSQL)etc
+- **Web Scraping**: BeautifulSoup, Selenium, PlayWright. etc
+- **Excel Expertise**: Advanced Excel functions, Pivot Tables, Macros, Dax etc
+        """
+        
+        
+        
+page_one_title = "# lmt data  Portfolio" 
 
 bio = """ ###### By. L Mugabi Trevor. 
-        Welcome to my portifolio.
+        Welcome to my Portfolio.
         """
 
 
@@ -29,7 +49,7 @@ startrek_bio = """ The Star Trek franchise is a beloved and iconic science ficti
     Star Trek is renowned for its groundbreaking representation, including one of the first multicultural casts on television and addressing social issues through allegorical storytelling. It has inspired generations of fans (known as Trekkies or Trekkers) and has become a cultural touchstone for its exploration of humanity's potential, the wonders of space exploration, and the importance of cooperation and understanding in a vast and diverse universe."""
 
 # start of page one extension
-page_two_name = "EDA"
+page_two_name = "Learn R Lang"
 page_2_title = "# Exploratory Data Analysis (EDA)"
 
 
@@ -84,3 +104,8 @@ fan_insight = """#### INSIGHTS
     
     
 # end of page one 
+
+#page three begin 
+page_three_name = "Excel workspace"
+
+#page three end 
