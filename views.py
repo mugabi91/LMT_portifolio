@@ -366,7 +366,6 @@ def page_two_view():
 def page_three_view():
     st.write("""### Working on it, Come Around a bit later... but a small view of whats around the corner""") #type: ignore
     st.write(""" if Rome was constructed in one day!, I would use the same contractors...😊😊""") #type: ignore
-    st.image(r"./images./color option 3.png")
-    
+    st.image(excel_dash_board)
     
 
