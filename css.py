@@ -20,7 +20,7 @@ css_sheet ="""
 
     /* Style for Column 2 */
     .col2 {
-        background-color: #C1FFD7;  /* Light green */
+        background-color: #041527;  /* Light green */
         padding: 20px;
         border-radius: 10px;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);

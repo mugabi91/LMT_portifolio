@@ -10,4 +10,5 @@ caption_startrek_pic = "Star Trek Enterprise illustration"
 
 glob_image_location = r"./images/glob.jpg"
 
-my_logo_pic =r"./images/my_log.jpg"
+my_logo_pic =r"C:\Users\M D\Pictures\Microsoft.ScreenSketch_8wekyb3d8bbwe!App\color option 1.png"
+# r"./images/my_log.jpg"

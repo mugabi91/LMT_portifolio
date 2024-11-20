@@ -7,6 +7,7 @@ import plotly.express as px #type: ignore
 import numpy as np 
 from PIL import Image # type:ignore
 import matplotlib.pyplot as plt #type: ignore
+import nbformat
 
 # start of helper functions..
 
@@ -17,9 +18,22 @@ def stream_data(body:str):
         time.sleep(0.02)
 
 
+# function to read jupyter files
+def read_and_display_jupyter_file(file):#type: ignore
+    notebook_path = file #type: ignore
+    with open(notebook_path, "r",encoding="utf-8") as nb_file:#type: ignore
+        notebook = nbformat.read(nb_file, as_version=4) # type: ignore
+    # Extract cell outputs
+    for cell in notebook.cells: # type: ignore
+        if cell.cell_type == "markdown": # type: ignore
+            st.markdown(cell.source)  # type: ignore
+        elif cell.cell_type == "code": # type: ignore
+            st.code(cell.source) # type: ignore
+
+
 # function to read datasets
 def read_file(file_location:str):
-    supported_file_types: list[str] =[
+    supported_file_types: list[str] = [
     ".xlsx",  # Excel Workbook (XML-based)
     ".xlsm",  # Excel Macro-Enabled Workbook (XML-based)
     ".xls",   # Excel 97-2003 Workbook (Binary-based)
@@ -29,7 +43,7 @@ def read_file(file_location:str):
     ".xlsb",  # Excel Binary Workbook
     ".ods"    # OpenDocument Spreadsheet
 ]
-
+    
     file_type: str = file_location.split(".")[-1].lower()
     if file_type in supported_file_types:
         df: pd.DataFrame = pd.read_excel(file_location) # type: ignore
@@ -51,13 +65,10 @@ def read_file(file_location:str):
 
 
 # end of helper funcs
-
-
-
-
 # page one view 
 
 def page_one_view(rows_in_data:int,cols_in_data:int, df:pd.DataFrame):
+
     #title 
     st.write(page_one_title.upper()) #type: ignore
     
@@ -342,4 +353,20 @@ Inspect the graphs  above for the income and edcation levels of the fans and non
     st.divider()
     
 # page one view end 
+def page_two_view():
+    main_loc = "./juptyer_notebooks/Learning_R/"
+    R_files = ["R_Overview.ipynb","R_variables.ipynb","R_operations.ipynb","R_Flow_Control.ipynb","R_Collections.ipynb"]
+    st.write(""" # Learn R programming..""") #type: ignore
+    for file in R_files:
+        read_and_display_jupyter_file(f"{main_loc+file}")
+        st.markdown("<div class=col2><div>",unsafe_allow_html=True)
+        st.divider()
+    
+
+def page_three_view():
+    st.write("""### Working on it, Come Around a bit later... but a small view of whats around the corner""") #type: ignore
+    st.write(""" if Rome was constructed in one day!, I would use the same contractors...😊😊""") #type: ignore
+    st.image(r"./images./color option 3.png")
+    
+    
 
