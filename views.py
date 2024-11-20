@@ -1,4 +1,4 @@
-seeimport pandas as pd 
+toseeimport pandas as pd 
 import streamlit as st 
 import time 
 from image_urls import *
@@ -366,6 +366,6 @@ def page_two_view():
 def page_three_view(dashboard:str):
     st.write("""### Working on it, Come Around a bit later... but a small view of whats around the corner""") #type: ignore
     st.write(""" if Rome was constructed in one day!, I would use the same contractors...😊😊""") #type: ignore
-    st.image(excel_dash_board)
+    st.image(dashboard)
     
 
