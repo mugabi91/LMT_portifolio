@@ -32,16 +32,19 @@ css_sheet ="""
         background-color:#041527;
         position: sticky;
         top: 0;  /* Keeps it at the top when you scroll */
-        width: 250px;
+        width: 450px;
         height: 100vh;  /* Make the sidebar take full height of the viewport */
         padding: 20px;
         color: white;
         box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);  /* Optional: shadow to give depth */
+        min-width: 350px;
+        max-width: 450px;
     }
     
     
     /* Sidebar text color and font */
     [data-testid="stSidebar"] * {
+        
         color: #E0E0E0;  /* Light gray for readability */
         font-family: 'Roboto', sans-serif;  /* Modern font */
         h1, h2, h3, h4, h5, h6 {
