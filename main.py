@@ -1,4 +1,4 @@
-
+de
 ############### start of imports ################################################################################################
 from views import *
 from css import css_sheet
@@ -79,7 +79,7 @@ def main():
 
         elif page == page_three_name:
             st.markdown("<div class=col2><div>",unsafe_allow_html=True)
-            page_three_view()
+            page_three_view(excel_dash_board)
             st.markdown("<div class=col2><div>",unsafe_allow_html=True)
             
 
