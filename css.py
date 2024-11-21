@@ -37,8 +37,7 @@ css_sheet ="""
         padding: 20px;
         color: white;
         box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);  /* Optional: shadow to give depth */
-        min-width: 350px;
-        max-width: 450px;
+
     }
     
     
