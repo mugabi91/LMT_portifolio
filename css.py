@@ -32,7 +32,7 @@ css_sheet ="""
         background-color:#041527;
         position: sticky;
         top: 0;  /* Keeps it at the top when you scroll */
-        width: 450px;
+        width: 400px;
         height: 100vh;  /* Make the sidebar take full height of the viewport */
         padding: 20px;
         color: white;
