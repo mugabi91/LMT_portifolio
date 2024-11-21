@@ -40,6 +40,12 @@ css_sheet ="""
 
     }
     
+    /* Main page background */
+    .main {
+        background-color:#F4F2EE;
+        color:black;
+    }
+    
     
     /* Sidebar text color and font */
     [data-testid="stSidebar"] * {
