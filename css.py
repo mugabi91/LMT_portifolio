@@ -93,11 +93,10 @@ css_sheet ="""
     .sidebar-profile-img {
         width: 200px;
         /*border-radius: 60%;*/
-        border: 3px dashed #4577bc;  /* Optional border around the image */
+        border: 3px dashed #4577bc;
         margin-bottom: 20px;
-        
         position: sticky;
-        top: 0;  /* Keeps it at the top when you scroll */
+        top: 0;
         padding: 20px;
         box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);  /* Optional: shadow to give depth */
     }
