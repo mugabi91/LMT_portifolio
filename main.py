@@ -22,8 +22,8 @@ def main():
         # sidebar title
         st.sidebar.title("Profile")
         #my_logo_pic =r"./images/my_log.png"
-        st.markdown(f"<img class='sidebar-profile-img' src='./images/my_log.png'/>", unsafe_allow_html=True)
-        #st.image(my_logo_pic, width=200)
+        #st.markdown(f"<img class='sidebar-profile-img' src='./images/my_log.png'/>", unsafe_allow_html=True)
+        st.image(my_logo_pic, width=200)
 
 
 
