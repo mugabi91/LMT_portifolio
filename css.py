@@ -93,7 +93,6 @@ css_sheet ="""
     .sidebar-profile-img {
         width: 210px;
         height: 210px;
-        object-fit: cover;
         border-radius: 60%;
         border: 3px dashed #4577bc;  /* Optional border around the image */
         margin-bottom: 20px;
