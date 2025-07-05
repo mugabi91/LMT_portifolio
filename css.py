@@ -91,8 +91,8 @@ css_sheet ="""
     
     /* Profile image styling (circular cut-out and centered) */
     .sidebar-profile-img {
-        width: 70px;
-        border-radius: 60%;
+        width: 200px;
+        /*border-radius: 60%;*/
         border: 3px dashed #4577bc;  /* Optional border around the image */
         margin-bottom: 20px;
         
