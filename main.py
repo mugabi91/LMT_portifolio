@@ -28,7 +28,7 @@ def main():
 
 
         # about me section
-        st.sidebar.subheader("About Me")
+        st.sidebar.subheader("About Me!")
         st.sidebar.write(profile_intro) #type:ignore
 
         # Skills Section
