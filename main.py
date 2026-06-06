@@ -21,13 +21,14 @@ def main():
     with st.sidebar:
         # sidebar title
         st.sidebar.title("Profile")
-        # st.markdown(f"<img class='sidebar-profile-img' src='{ my_logo_pic }'/>", unsafe_allow_html=True)
+        #my_logo_pic =r"./images/my_log.png"
+        #st.markdown(f"<img class='sidebar-profile-img' src='./images/my_log.png'/>", unsafe_allow_html=True)
         st.image(my_logo_pic, width=200)
 
 
 
         # about me section
-        st.sidebar.subheader("About Me")
+        st.sidebar.subheader("About Me!")
         st.sidebar.write(profile_intro) #type:ignore
 
         # Skills Section

@@ -91,15 +91,12 @@ css_sheet ="""
     
     /* Profile image styling (circular cut-out and centered) */
     .sidebar-profile-img {
-        width: 210px;
-        height: 210px;
-        object-fit: cover;
-        border-radius: 60%;
-        border: 3px dashed #4577bc;  /* Optional border around the image */
+        width: 500px;
+        border-radius: 250px;
+        border: 3px dashed #4577bc;
         margin-bottom: 20px;
-        
         position: sticky;
-        top: 0;  /* Keeps it at the top when you scroll */
+        top: 0;
         padding: 20px;
         box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);  /* Optional: shadow to give depth */
     }
