@@ -1,72 +1,18 @@
-import pandas as pd 
-import streamlit as st 
-import time 
-from image_urls import *
-from contents import *
-import plotly.express as px #type: ignore
-import numpy as np 
-from PIL import Image # type:ignore
-import matplotlib.pyplot as plt #type: ignore
+import time
+
+import matplotlib.pyplot as plt  # type: ignore
 import nbformat
+import numpy as np
+import pandas as pd
+import plotly.express as px  # type: ignore
+import streamlit as st
+from PIL import Image  # type:ignore
 
-# start of helper functions..
-
-#function to create type write effect
-def stream_data(body:str):
-    for word in body.split(" "):
-        yield word + " "
-        time.sleep(0.02)
-
-
-# function to read jupyter files
-def read_and_display_jupyter_file(file):#type: ignore
-    notebook_path = file #type: ignore
-    with open(notebook_path, "r",encoding="utf-8") as nb_file:#type: ignore
-        notebook = nbformat.read(nb_file, as_version=4) # type: ignore
-    # Extract cell outputs
-    for cell in notebook.cells: # type: ignore
-        if cell.cell_type == "markdown": # type: ignore
-            st.markdown(cell.source)  # type: ignore
-        elif cell.cell_type == "code": # type: ignore
-            st.code(cell.source) # type: ignore
+from contents import *
+from utils import read_and_display_jupyter_file, stream_data
 
 
-# function to read datasets
-def read_file(file_location:str):
-    supported_file_types: list[str] = [
-    ".xlsx",  # Excel Workbook (XML-based)
-    ".xlsm",  # Excel Macro-Enabled Workbook (XML-based)
-    ".xls",   # Excel 97-2003 Workbook (Binary-based)
-    ".csv",   # Comma Separated Values
-    ".xltx",  # Excel Template (XML-based)
-    ".xltm",  # Excel Macro-Enabled Template (XML-based)
-    ".xlsb",  # Excel Binary Workbook
-    ".ods"    # OpenDocument Spreadsheet
-]
-    
-    file_type: str = file_location.split(".")[-1].lower()
-    if file_type in supported_file_types:
-        df: pd.DataFrame = pd.read_excel(file_location) # type: ignore
-        return df 
-    else:
-        match file_type:
-            case "csv":
-                df = pd.read_csv(file_location) # type: ignore
-                return df 
-            case "json":
-                df = pd.read_json(file_location) # type: ignore
-                return df
-
-            case "parquet":
-                df = pd.read_parquet(file_location) 
-            case _ :
-                print(f">>>[Error Info]:File type unsupported..")
-                return None
-
-
-# end of helper funcs
 # page one view 
-
 def page_one_view(rows_in_data:int,cols_in_data:int, df:pd.DataFrame):
 
     #title 
