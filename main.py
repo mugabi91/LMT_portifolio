@@ -13,14 +13,14 @@ def main():
     st.set_page_config(
         page_title="Trevor's Portfolio",
         layout="wide",
-        page_icon=r".\images\my_log.png"
+        page_icon=r"./images/my_log.png"
     )
     ### inject css and style
     st.markdown(css_sheet, unsafe_allow_html=True)
-    st.html(r".\components\gemini_glow.html")
+    st.html(r"./components/gemini_glow.html")
     
     ## nav  bar
-    st.html(r".\components\navbar.html")
+    st.html(r"./components/navbar.html")
 
     current_page = st.query_params.get("page", "home")
 
