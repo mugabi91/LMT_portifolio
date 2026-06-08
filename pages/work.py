@@ -10,7 +10,7 @@ def render_work():
     st.set_page_config(
         page_title="Trevor's Work Page",
         layout="wide",
-        page_icon=r".\images\my_log.png"
+        page_icon=r"./images/my_log.png"
     )
 
     # =====================================================
@@ -26,7 +26,7 @@ def render_work():
         with cols[idx % 3]:
             st.html(
                 render_component(
-                    file_path=r".\components\project_card.html",
+                    file_path=r"./components/project_card.html",
                     context=project
                 )
             )

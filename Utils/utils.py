@@ -9,30 +9,43 @@ from pydantic import BaseModel
 
 
 def render_component(file_path: str, context: BaseModel) -> str:
+    """Reads an HTML file and replaces {{key}} placeholders dynamically using
+
+    a Pydantic model. Handles cross-platform path resolution safely.
     """
-    Reads an HTML file and replaces {{key}} placeholders 
-    dynamically using a Pydantic model.
-    """
+    absolute_path: Path | None = None
     try:
-        with open(file_path, 'r', encoding='utf-8') as f:
+        # 1. Dynamically locate your project's root directory
+        # Adjust '.parent' stacking depending on where this utility file lives.
+        # If this is in 'Utils/utils.py', going up two levels gets you to the root directory.
+        BASE_DIR = Path(__file__).resolve().parent.parent
+
+        # 2. Convert the input string path into a platform-agnostic Path object
+        # Path() automatically converts Windows backslashes (\) to Linux forward slashes (/) when on Linux
+        clean_relative_path = Path(file_path)
+
+        # 3. Create the absolute target path
+        absolute_path = BASE_DIR / clean_relative_path
+
+        # Read the file using the verified absolute path object
+        with open(absolute_path, "r", encoding="utf-8") as f:
             html_content = f.read()
-        
+
         # Convert model to dict once
         data = context.model_dump()
-    
+
         # Use a single regex pass to replace all placeholders
-        # This looks for {{ key }} and uses the key to look up the value in our dict
         pattern = r"\{\{\s*(\w+)\s*\}\}"
-        
+
         def replace_match(match):
             key = match.group(1)
-            # Returns the value if key exists, otherwise keeps the {{placeholder}}
             return str(data.get(key, match.group(0)))
 
         return re.sub(pattern, replace_match, html_content)
 
     except FileNotFoundError:
-        return "Error: HTML file not found."
+        # Returning the absolute_path here will help you debug exactly where Linux is looking for the file
+        return f"Error: HTML file not found at location: {absolute_path}"
     except Exception as e:
         return f"Error: {str(e)}"
 

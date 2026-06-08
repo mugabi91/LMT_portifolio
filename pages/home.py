@@ -14,20 +14,20 @@ def render_home():
     st.set_page_config(
         page_title="Trevor's Portfolio",
         layout="wide",
-        page_icon=r".\images\my_log.png"
+        page_icon=r"./images/my_log.png"
     )
 
     # =====================================================
     # HERO
     # =====================================================
-    st.html(r'.\components\hero.html')
+    st.html(r'./components/hero.html')
 
 
     # =====================================================
     # FEATURED PROJECT
     # =====================================================
     st.markdown('<div id="work"></div>', unsafe_allow_html=True)
-    st.html(r'.\components\featured_card.html')
+    st.html(r'./components/featured_card.html')
 
 
     # =====================================================
@@ -43,7 +43,7 @@ def render_home():
         with cols[idx % 3]:
             st.html(
                 render_component(
-                    file_path=r".\components\project_card.html",
+                    file_path=r"./components/project_card.html",
                     context=project
                 )
             )
@@ -56,11 +56,11 @@ def render_home():
     # ABOUT (METRICS)
     # =====================================================
     # st.markdown('<div class="section-title">About</div>', unsafe_allow_html=True)
-    st.html(r".\components\about.html")
+    st.html(r"./components/about.html")
     st.markdown("<br>", unsafe_allow_html=True)
 
     # =====================================================
     # CONTACT
     # =====================================================
     st.markdown('<div id="contact"></div>', unsafe_allow_html=True)
-    st.html(r'.\components\contact.html')
+    st.html(r'./components/contact.html')
