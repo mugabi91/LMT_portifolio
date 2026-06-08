@@ -9,7 +9,7 @@ import streamlit as st
 from PIL import Image  # type:ignore
 
 from contents import *
-from utils import read_and_display_jupyter_file, stream_data
+from Utils.utils import read_and_display_jupyter_file, stream_data
 
 
 # page one view 

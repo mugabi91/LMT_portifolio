@@ -5,6 +5,7 @@ import streamlit as st
 # =====================================================
 # CONTACT
 # =====================================================
+@st.cache_data
 def render_contact():
     st.set_page_config(
         page_title="Trevor's Contact Page",

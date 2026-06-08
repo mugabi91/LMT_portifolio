@@ -277,7 +277,7 @@ header {visibility: hidden;}
     font-size: 3rem;
     font-weight: 800;
     color: #0f172a;
-    margin-top: 120px;
+    margin-top: 40px;
     margin-bottom: 20px;
 }
 
@@ -343,7 +343,7 @@ header {visibility: hidden;}
 ===================================================== */
 
 .about{
-    padding-top:1px;
+    padding-top:10x;
     justify-content: center;
 }
 
@@ -567,6 +567,25 @@ header {visibility: hidden;}
     position: relative;
     z-index: 2;
 }
+
+
+.page-content{
+    animation: fadeIn 0.35s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
 </style>
 """
     

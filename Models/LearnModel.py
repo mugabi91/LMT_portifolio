@@ -1,6 +1,7 @@
+
 from pydantic import BaseModel
 
 
-class ProjectModel(BaseModel):
+class LearnModel(BaseModel):
     title:str
     desc:str
